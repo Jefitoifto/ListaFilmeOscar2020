@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FilmesApp</string>
+    <string name="textViewCardapio">Cardápio</string>
+    <string name="textCafe">Café com leite</string>
+    <string name="textBolo">Bolo</string>
+    <string name="textSanduiche">Sanduíche</string>
+</resources>
