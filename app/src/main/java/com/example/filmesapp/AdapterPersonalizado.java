@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class AdapterPersonalizado extends BaseAdapter {
     private Context context;
-    private ArrayList<ItemLanche> dados;
+    private ArrayList<ItemFilme> dados;
 
-    public AdapterPersonalizado(Context context, ArrayList<ItemLanche> dados) {
+    public AdapterPersonalizado(Context context, ArrayList<ItemFilme> dados) {
         this.context = context;
         this.dados = dados;
     }
@@ -25,7 +25,7 @@ public class AdapterPersonalizado extends BaseAdapter {
     }
 
     @Override
-    public ItemLanche getItem(int i) {
+    public ItemFilme getItem(int i) {
         return dados.get(i);
     }
 
@@ -37,18 +37,15 @@ public class AdapterPersonalizado extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View minhaView = layoutInflater.inflate(R.layout.iten_lanche,viewGroup,false);
+        //define o layout
+        View minhaView = layoutInflater.inflate(R.layout.i_filmes,viewGroup,false);
 
-        ItemLanche itemLanche = dados.get(i);
-        TextView textViewDescricao = minhaView.findViewById(R.id.textViewDescricao);
-        textViewDescricao.setText(itemLanche.getDescricao());
+        ItemFilme itemFilme = dados.get(i);
+        TextView textViewDescricao = minhaView.findViewById(R.id.textViewFilme);
+        textViewDescricao.setText(itemFilme.getNomeFilme());
 
-        TextView textViewPreco = minhaView.findViewById(R.id.textViewPreço);
-        textViewPreco.setText("R$: "+itemLanche.getPreco().toString());
-
-        ImageView imageViewLanche = minhaView.findViewById(R.id.imageViewLanche);
-        imageViewLanche.setImageResource(itemLanche.getLanche());
-
+        ImageView imageViewFilme = minhaView.findViewById(R.id.imageViewFilme);
+        imageViewFilme.setImageResource(itemFilme.getFilme());
 
         return minhaView;
     }
