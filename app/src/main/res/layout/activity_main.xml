@@ -14,11 +14,11 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:text="@string/textViewCardapio"
+            android:text="Filmes que ganharam o Oscar 2020"
             />
 
     <ListView android:layout_width="match_parent" android:layout_height="wrap_content"
-              android:id="@+id/listViewLanche"
+              android:id="@+id/listViewFilmes"
               android:background="@color/colorAccent"
               android:divider="@color/background"
               android:dividerHeight="3dp"/>
